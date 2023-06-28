@@ -1,0 +1,35 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.field label {
+  order: 1;
+  font-weight: bold;
+}
+
+.field .errors {
+  order: 2;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.field .errors li {
+  font-size: .75rem;
+  color: red;
+  list-style: none;
+}
+
+.field input {
+  order: 3;
+}
+
+.field input:invalid {
+  order: 3;
+}
+
+.-has-checked .field input:invalid ~ .errors {
+  display: block;
+}

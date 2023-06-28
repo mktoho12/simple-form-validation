@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>フォームのバリデーション</title>
+  <meta name="description" content="フォームのバリデーション" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="javascript" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <h1>フォームのバリデーション</h1>
+  <form novalidate>
+    <div class="field">
+      <label for="name">名前</label>
+      <input type="text" id="name" name="name" placeholder="あなたの名前を教えてください" required />
+      <ul class="errors">
+        <li data-invalid-state="valueMissing">入力してください</li>
+      </ul>
+    </div>
+    <button>送信</button>
+  </form>
+</body>
+
+</html>
